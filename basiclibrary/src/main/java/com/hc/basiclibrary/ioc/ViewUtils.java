@@ -64,7 +64,7 @@ public class ViewUtils {
         public boolean onLongClick(View v) {
             try {
                 mMethod.setAccessible(true);
-                mMethod.invoke(mObject, null);
+                mMethod.invoke(mObject, new Object[]{null});
             } catch (Exception e) {
                 try {
                     mMethod.invoke(mObject,v);
@@ -136,7 +136,7 @@ public class ViewUtils {
 
             try {
                 mMethod.setAccessible(true);
-                mMethod.invoke(mObject,null);
+                mMethod.invoke(mObject,new Object[]{null});
             } catch (Exception e) {
                 try {
                     mMethod.invoke(mObject,v);
