@@ -104,6 +104,7 @@ public class FragmentCustom extends BaseFragment<FragmentCustomBinding> {
         mFragmentManage = new BaseFragmentManage(R.id.custom_fragment,getActivity());
         mFragmentManage.addFragment(0,new FragmentCustomGroup());
         mFragmentManage.addFragment(1,new FragmentCustomDirection());
+        mFragmentManage.addFragment(2,new FragmentCustomCar());
         mFragmentManage.showFragment(1);
     }
 
@@ -126,11 +127,18 @@ public class FragmentCustom extends BaseFragment<FragmentCustomBinding> {
         }else if (isCheck(viewBinding.customFragmentGroup)){
             viewBinding.customFragmentGroup.setState(true);
             viewBinding.customFragmentDirection.setState(false);
+            viewBinding.customFragmentCar.setState(false);
             mFragmentManage.showFragment(0);
         }else if (isCheck(viewBinding.customFragmentDirection)){
             viewBinding.customFragmentGroup.setState(false);
             viewBinding.customFragmentDirection.setState(true);
+            viewBinding.customFragmentCar.setState(false);
             mFragmentManage.showFragment(1);
+        }else if (isCheck(viewBinding.customFragmentCar)){
+            viewBinding.customFragmentGroup.setState(false);
+            viewBinding.customFragmentDirection.setState(false);
+            viewBinding.customFragmentCar.setState(true);
+            mFragmentManage.showFragment(2);
         }else if (isCheck(viewBinding.customFragmentReadCheck) || isCheck(viewBinding.customFragmentReadHex)){
             viewBinding.customFragmentReadCheck.toggle();
         }else if (isCheck(viewBinding.customFragmentNewlineCheck) || isCheck(viewBinding.customFragmentNewlineText)){
@@ -162,7 +170,7 @@ public class FragmentCustom extends BaseFragment<FragmentCustomBinding> {
 
     private void initData() {
         View[] viewArray = {viewBinding.customFragmentPullImage,viewBinding.customFragmentShowReadCheck,viewBinding.customFragmentShowReadText,
-                viewBinding.customFragmentGroup,viewBinding.customFragmentDirection,viewBinding.customFragmentReadCheck,viewBinding.customFragmentReadHex,
+                viewBinding.customFragmentGroup,viewBinding.customFragmentDirection,viewBinding.customFragmentCar,viewBinding.customFragmentReadCheck,viewBinding.customFragmentReadHex,
                 viewBinding.customFragmentNewlineCheck,viewBinding.customFragmentNewlineText,viewBinding.customFragmentEmpty};
         bindOnClickListener(viewArray);
         subscription(StaticConstants.FRAGMENT_STATE_DATA);

@@ -155,6 +155,20 @@
             app:UTextOriginalColor="@color/menuBack"
             app:UTextWidth="3dp" />
 
+        <com.hc.mixthebluetooth.customView.UnderlineTextView
+            android:id="@+id/custom_fragment_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/car_button"
+            android:textSize="16sp"
+            app:UTextColor="@color/frenchGrey"
+            app:UTextLineColor="@color/skyBlue"
+            app:UTextOriginalColor="@color/menuBack"
+            app:UTextWidth="3dp" />
+
         <View
             android:layout_width="0dp"
             android:layout_weight="1"
