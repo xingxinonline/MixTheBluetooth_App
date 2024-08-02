@@ -90,8 +90,12 @@ public class FragmentCustomCar extends BaseFragment<FragmentCustomButtonCarBindi
                 return;
             }
 
-            int[] ids = {R.id.custom_fragment_car_top,R.id.custom_fragment_car_left,R.id.custom_fragment_car_bottom,
-                    R.id.custom_fragment_car_right,R.id.custom_fragment_car_middle};
+            int[] ids = { R.id.custom_fragment_car_front_left, R.id.custom_fragment_car_front,
+                    R.id.custom_fragment_car_front_right,
+                    R.id.custom_fragment_car_left, R.id.custom_fragment_car_rotate,
+                    R.id.custom_fragment_car_back_right,
+                    R.id.custom_fragment_car_back_left, R.id.custom_fragment_car_back,
+                    R.id.custom_fragment_car_back_right };
             for (int id : ids) {
                 if (v.getId() == id){
                     if (viewBinding.customFragmentDirectionSet.isChick()) {
@@ -115,9 +119,12 @@ public class FragmentCustomCar extends BaseFragment<FragmentCustomButtonCarBindi
         };
         setItemClickListener(viewBinding.customFragmentCarLinear,listener);
         setItemClickLongListener(viewBinding.customFragmentCarLinear,longClickListener);
-        TextView[] buttons = {viewBinding.customFragmentCarLeft,
-                viewBinding.customFragmentCarRight,viewBinding.customFragmentCarBottom,
-                viewBinding.customFragmentCarTop,viewBinding.customFragmentCarMiddle};
+        TextView[] buttons = { viewBinding.customFragmentCarFrontLeft, viewBinding.customFragmentCarFront,
+                viewBinding.customFragmentCarFrontRight,
+                viewBinding.customFragmentCarLeft, viewBinding.customFragmentCarRotate,
+                viewBinding.customFragmentCarRight,
+                viewBinding.customFragmentCarBackLeft, viewBinding.customFragmentCarBack,
+                viewBinding.customFragmentCarBackRight };
         for (TextView button : buttons) {
             button.setOnClickListener(listener);
             String data = mStorage.getDataString(String.valueOf(button.getId()));
@@ -201,11 +208,15 @@ public class FragmentCustomCar extends BaseFragment<FragmentCustomButtonCarBindi
             return false;
         };
 
-        viewBinding.customFragmentCarTop.setOnTouchListener(touch);
+        viewBinding.customFragmentCarFrontLeft.setOnTouchListener(touch);
+        viewBinding.customFragmentCarFront.setOnTouchListener(touch);
+        viewBinding.customFragmentCarFrontRight.setOnTouchListener(touch);
         viewBinding.customFragmentCarLeft.setOnTouchListener(touch);
-        viewBinding.customFragmentCarMiddle.setOnTouchListener(touch);
+        viewBinding.customFragmentCarRotate.setOnTouchListener(touch);
         viewBinding.customFragmentCarRight.setOnTouchListener(touch);
-        viewBinding.customFragmentCarBottom.setOnTouchListener(touch);
+        viewBinding.customFragmentCarBackLeft.setOnTouchListener(touch);
+        viewBinding.customFragmentCarBack.setOnTouchListener(touch);
+        viewBinding.customFragmentCarBackRight.setOnTouchListener(touch);
     }
 
     @SuppressWarnings("all")
