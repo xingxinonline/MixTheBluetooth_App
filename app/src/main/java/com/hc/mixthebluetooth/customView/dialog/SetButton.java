@@ -89,8 +89,8 @@ public class SetButton extends LinearLayout {
 
     private void affirm() {
         if (mViewBinding.hintSetButtonName.getText().toString().trim().equals("")){
-            Toast.makeText(getContext(), "名称不能为空", Toast.LENGTH_SHORT).show();
-            return;
+            // Toast.makeText(getContext(), "名称不能为空", Toast.LENGTH_SHORT).show();
+            // return;
         }
         if (mViewBinding.hintSetButtonContent.getText().toString().trim().equals("")){
             Toast.makeText(getContext(), "内容不能为空", Toast.LENGTH_SHORT).show();

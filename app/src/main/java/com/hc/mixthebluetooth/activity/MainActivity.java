@@ -172,7 +172,7 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     private void setTitle() {
         mTitle = new DefaultNavigationBar
                 .Builder(this, findViewById(R.id.main_name))
-                .setLeftText("HC蓝牙助手", CommonPopupWindow.dip2px(this,20))
+                .setLeftText("苹芯蓝牙助手", CommonPopupWindow.dip2px(this, 20))
                 .hideLeftIcon()
                 .setRightIcon()
                 .setLeftClickListener(v -> {

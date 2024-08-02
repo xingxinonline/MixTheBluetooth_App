@@ -110,7 +110,8 @@ public class FragmentCustom extends BaseFragment<FragmentCustomBinding> {
 
     private void setViewHeight() {//动态设置fragment的高度
         viewBinding.customFragment.post(() -> {
-            mFragmentHeight = viewBinding.customFragment.getHeight();
+            // mFragmentHeight = viewBinding.customFragment.getHeight();
+            mFragmentHeight = 1288;
             ViewGroup.LayoutParams params=viewBinding.customFragment.getLayoutParams();
             params.height= mFragmentHeight;
             logError("height is "+mFragmentHeight);

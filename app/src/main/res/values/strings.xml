@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="ExtraTranslation">
 
     <string name="hint">提示</string>
-    <string name="app_name">HC蓝牙助手</string>
+    <string name="app_name">苹芯蓝牙助手</string>
     <string name="module_name">蓝牙名称:</string>
     <string name="module_mac">物理地址:</string>
     <string name="pop_window_item_1">只显示有名字的设备</string>

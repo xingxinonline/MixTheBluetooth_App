@@ -245,7 +245,7 @@ public class SendFileActivity extends BaseActivity<ActivitySendFileBinding> {
     private void initTitle() {
         new DefaultNavigationBar
                 .Builder(this, findViewById(R.id.activity_send_file))
-                .setTitle("HC蓝牙助手("+HoldBluetooth.getInstance().getConnectedArray().get(0).getName()+")")
+                .setTitle("苹芯蓝牙助手("+HoldBluetooth.getInstance().getConnectedArray().get(0).getName()+")")
                 .hideLeftText()
                 .builer();
     }

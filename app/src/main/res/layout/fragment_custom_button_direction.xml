@@ -60,7 +60,7 @@
             android:layout_width="100dp"
             style="@style/button_back_style"
             android:layout_height="wrap_content"
-            android:text="top"/>
+            android:text="前伸"/>
     </LinearLayout>
 
     <LinearLayout
@@ -76,21 +76,21 @@
             style="@style/button_back_style"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="left" />
+            android:text="左侧" />
 
         <TextView
             android:id="@+id/custom_fragment_direction_middle"
             style="@style/button_back_style"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="middle" />
+            android:text="停止" />
 
         <TextView
             android:id="@+id/custom_fragment_direction_right"
             style="@style/button_back_style"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="right" />
+            android:text="右侧" />
     </LinearLayout>
 
     <LinearLayout
@@ -102,7 +102,7 @@
             android:layout_width="100dp"
             style="@style/button_back_style"
             android:layout_height="wrap_content"
-            android:text="bottom"/>
+            android:text="后缩"/>
     </LinearLayout>
 
     <HorizontalScrollView
