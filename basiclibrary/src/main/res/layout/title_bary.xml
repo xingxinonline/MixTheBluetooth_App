@@ -7,19 +7,29 @@
         android:id="@+id/back"
         style="@style/back_view" />
 
+    <ImageView
+        android:id="@+id/left_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="1dp"
+        android:layout_toEndOf="@id/back"
+        android:padding="5dp"
+        android:src="@drawable/pimchip_logo_200_white" />
+
     <com.hc.basiclibrary.titleBasic.RotateTextView
         android:id="@+id/left_text"
         style="@style/left_view"
-        android:textSize="18sp"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@id/back"
-        android:textColor="@color/white"
-        android:maxWidth="225dp"
-        android:singleLine="true"
+        android:layout_toEndOf="@id/left_icon"
         android:ellipsize="marquee"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:text="苹芯蓝牙助手"/>
+        android:maxWidth="225dp"
+        android:paddingLeft="0.0dip"
+        android:singleLine="true"
+        android:text="苹芯科技"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/title"

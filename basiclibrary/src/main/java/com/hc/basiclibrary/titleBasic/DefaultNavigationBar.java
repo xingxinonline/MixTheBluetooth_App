@@ -53,6 +53,7 @@ public class DefaultNavigationBar extends
         setVisibility(R.id.right_text,getParams().rightText);
         setVisibility(R.id.right_more,getParams().rightText);
         setVisibility(R.id.left_text,getParams().leftTextVisible);
+        setVisibility(R.id.left_icon, getParams().leftIcon);
         setVisibility(R.id.right_icon,getParams().rightIcon);
         setVisibility(R.id.title_loading,getParams().rightLoading);
 
@@ -60,6 +61,7 @@ public class DefaultNavigationBar extends
         getParams().mRightImageView = (ImageView) getChildView(R.id.right_icon);
 
         setTextPaddingLeft(R.id.left_text,getParams().leftTextPaddingLeft);
+        setIconMarginLeft(R.id.left_icon, getParams().leftIconMarginStart);
     }
 
     public void updateText(String name){
@@ -161,6 +163,18 @@ public class DefaultNavigationBar extends
             return this;
         }
 
+        // 设置右边的图片
+        public Builder setLeftIcon(int marginStart) {
+            p.leftIcon = View.VISIBLE;
+            p.leftIconMarginStart = marginStart;
+            return this;
+        }
+
+        public Builder setLeftIconVisible() {
+            p.leftIconVisible = View.VISIBLE;
+            return this;
+        }
+
         //设置右边的图片
         public Builder setRightIcon(){
             p.rightIcon = View.VISIBLE;
@@ -195,9 +209,11 @@ public class DefaultNavigationBar extends
             public int leftTextVisible = View.VISIBLE;
             public int leftIconVisible = View.VISIBLE;
             public int rightText =View.GONE;
+            public int leftIcon = View.GONE;
             public int rightIcon = View.GONE;
             public int rightLoading = View.GONE;
-            public int leftTextPaddingLeft = 20;
+            public int leftTextPaddingLeft = 40;
+            public int leftIconMarginStart = 0;
             public View.OnClickListener mRightClickListener;
             public View.OnClickListener mLeftClickListener = view -> {
                 ((Activity) mContext).finish();//关闭Activity

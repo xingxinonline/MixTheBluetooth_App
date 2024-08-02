@@ -246,7 +246,9 @@ public class CommunicationActivity extends BaseActivity<ActivityCommunicationBin
         };
         mTitle = new DefaultNavigationBar
                 .Builder(this, findViewById(R.id.communication_name))
-                .setLeftText("苹芯蓝牙助手",0)
+                .setLeftIconVisible()
+                .setLeftIcon(0)
+                .setLeftText("苹芯科技", 0)
                 .setRightText(CONNECTING)
                 .setRightClickListener(listener)
                 .builer();

@@ -41,6 +41,15 @@ public abstract class AbsNavigationBar<P extends AbsNavigationBar.Builder.AbsNav
         view.setPadding(padding,0,0,0);
     }
 
+    public void setIconMarginLeft(int viewId, int marginStart) {
+        View view = mNavigationView.findViewById(viewId);
+        if (view != null && view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
+            ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
+            layoutParams.setMarginStart(marginStart); // 设置 marginStart
+            view.setLayoutParams(layoutParams); // 重新应用 LayoutParams
+        }
+    }
+
     protected View getChildView(int id){
         return findViewById(id);
     }
@@ -70,9 +79,6 @@ public abstract class AbsNavigationBar<P extends AbsNavigationBar.Builder.AbsNav
 
         applyView();
     }
-
-
-
 
     public abstract static class Builder{
 
