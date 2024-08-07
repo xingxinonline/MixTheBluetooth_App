@@ -61,21 +61,21 @@
             style="@style/button_back_style"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="18dp"
+            android:layout_margin="12dp"
             android:background="@drawable/front_left" />
         <TextView
             android:id="@+id/custom_fragment_car_front"
             style="@style/button_back_style"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="18dp"
+            android:layout_margin="12dp"
             android:background="@drawable/front" />
         <TextView
             android:id="@+id/custom_fragment_car_front_right"
             style="@style/button_back_style"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="18dp"
+            android:layout_margin="12dp"
             android:background="@drawable/front_right" />
     </LinearLayout>
 
@@ -92,7 +92,7 @@
             style="@style/button_back_style"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="18dp"
+            android:layout_margin="12dp"
             android:background="@drawable/left" />
 
         <TextView
@@ -100,7 +100,7 @@
             style="@style/button_back_style"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="18dp"
+            android:layout_margin="12dp"
             android:background="@drawable/rotate" />
 
         <TextView
@@ -108,7 +108,7 @@
             style="@style/button_back_style"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="18dp"
+            android:layout_margin="12dp"
             android:background="@drawable/right" />
     </LinearLayout>
 
@@ -122,21 +122,21 @@
             style="@style/button_back_style"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="18dp"
+            android:layout_margin="12dp"
             android:background="@drawable/back_left" />
         <TextView
             android:id="@+id/custom_fragment_car_back"
             style="@style/button_back_style"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="18dp"
+            android:layout_margin="12dp"
             android:background="@drawable/back" />
         <TextView
             android:id="@+id/custom_fragment_car_back_right"
             style="@style/button_back_style"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_margin="18dp"
+            android:layout_margin="12dp"
             android:background="@drawable/back_right" />
     </LinearLayout>
 

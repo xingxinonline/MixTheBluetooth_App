@@ -93,8 +93,8 @@ public class FragmentCustomCar extends BaseFragment<FragmentCustomButtonCarBindi
             int[] ids = { R.id.custom_fragment_car_front_left, R.id.custom_fragment_car_front,
                     R.id.custom_fragment_car_front_right,
                     R.id.custom_fragment_car_left, R.id.custom_fragment_car_rotate,
-                    R.id.custom_fragment_car_back_right,
-                    R.id.custom_fragment_car_back_left, R.id.custom_fragment_car_back,
+                    R.id.custom_fragment_car_right,
+                            R.id.custom_fragment_car_back_left, R.id.custom_fragment_car_back,
                     R.id.custom_fragment_car_back_right };
             for (int id : ids) {
                 if (v.getId() == id){
