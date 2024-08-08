@@ -81,8 +81,18 @@ public class FragmentCustomDirection extends BaseFragment<FragmentCustomButtonDi
 
     private void setListener() {
         View.OnClickListener listener = v -> {
-            if (v.getId() == R.id.custom_fragment_direction_hex){
-                viewBinding.customFragmentDirectionHex.toggle();
+            if (v.getId() == R.id.custom_fragment_direction_vol) {
+                viewBinding.customFragmentDirectionVol.toggle();
+                if (viewBinding.customFragmentDirectionVol.getState() != CustomButtonView.State.Run) {
+                    send(viewBinding.customFragmentDirectionVol.getState() == CustomButtonView.State.Open ? "31"
+                            : "30");
+                } else {
+                    // 如果状态是Run，可以选择延迟发送数据，或者在动画结束后再调用send
+                    viewBinding.customFragmentDirectionVol.postDelayed(() -> {
+                        send(viewBinding.customFragmentDirectionVol.getState() == CustomButtonView.State.Open ? "31"
+                                : "30");
+                    }, 200); // 200ms 是动画持续时间
+                }
                 return;
             }else if (v.getId() == R.id.custom_fragment_direction_set){
                 if (!viewBinding.customFragmentDirectionSet.isChick()) toastShort("单击方向按钮即可编辑按钮内容");
@@ -126,7 +136,7 @@ public class FragmentCustomDirection extends BaseFragment<FragmentCustomButtonDi
             }
         }
         viewBinding.customFragmentDirectionSet.setOnClickListener(listener);
-        viewBinding.customFragmentDirectionHex.setOnClickListener(listener);
+        viewBinding.customFragmentDirectionVol.setOnClickListener(listener);
     }
 
     /**
@@ -266,7 +276,7 @@ public class FragmentCustomDirection extends BaseFragment<FragmentCustomButtonDi
             toastShort("当前状态不能发送数据，请连接完再尝试发送数据");
             return;
         }
-        boolean isHex = viewBinding.customFragmentDirectionHex.getState() == CustomButtonView.State.Open;
+        boolean isHex = true;
         byte[] bytes;
         if (mIsSendNewline) data += isHex? "0D0A":"\r\n";
         if (isHex) data = Analysis.getFiltrationHexString(data);

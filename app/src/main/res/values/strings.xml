@@ -11,6 +11,7 @@
     <string name="pop_window_item_5">自定义过滤:  0x</string>
     <string name="pop_window_item_6">例如:FFF0</string>
 
+    <string name="pop_window_fragment_0">语音控制</string>
     <string name="pop_window_fragment_1">HEX发送</string>
     <string name="pop_window_fragment_2">HEX接收</string>
     <string name="pop_window_fragment_3">显示发送时间</string>

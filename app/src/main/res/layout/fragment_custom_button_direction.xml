@@ -17,9 +17,9 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:textSize="16sp"
-            android:text="@string/pop_window_fragment_1"/>
+            android:text="@string/pop_window_fragment_0"/>
         <com.hc.mixthebluetooth.customView.CustomButtonView
-            android:id="@+id/custom_fragment_direction_hex"
+            android:id="@+id/custom_fragment_direction_vol"
             android:layout_width="60dp"
             android:layout_height="20dp"
             android:layout_gravity="center_vertical"

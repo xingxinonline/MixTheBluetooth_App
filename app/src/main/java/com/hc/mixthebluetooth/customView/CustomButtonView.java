@@ -158,7 +158,7 @@ public class CustomButtonView extends View{
         }else return;
         mState = State.Run;
         animator.setInterpolator(new MyInterpolator());
-        animator.setDuration(200);
+        animator.setDuration(100);
         animator.addUpdateListener(animation -> {
             if (mState == State.Run) {
                 mNumber = (float) animation.getAnimatedValue();
